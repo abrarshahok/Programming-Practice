@@ -3,8 +3,8 @@ using namespace std;
 
 int main(){
     string str;
-    long long temp;
-    long long ans=0;
+    long double temp;
+    long double ans=0;
     char op ='+';
     cout<<"Enter Equation : ";
     getline(cin,str);
