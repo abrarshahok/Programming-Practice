@@ -1,5 +1,5 @@
 import java.util.*;
-public class String_Palindrome {
+public class _08_String_Palindrome {
     public static void main(String[] args) {
         // Scanner Class
         Scanner in = new Scanner(System.in);

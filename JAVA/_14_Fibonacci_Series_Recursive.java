@@ -1,4 +1,4 @@
-public class Fibonacci {
+public class _14_Fibonacci_Series_Recursive {
     public static void printFib(int a, int b, int n) {
         if(n==0){
             return;

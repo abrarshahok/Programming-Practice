@@ -1,5 +1,5 @@
 import java.util.*;
-public class Print_Sum {
+public class _13_Sum_of_Numbers_in_Range_Recursive {
 
     public static void printSum(int i, int n, int sum) {
         if(i==n){

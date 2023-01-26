@@ -1,5 +1,5 @@
 import java.util.*;
-public class Calculator {
+public class _01_Calculator {
     public static void main(String[] args) {
         //Clear Screen
         System.out.print("\033[H\033[2J");

@@ -1,5 +1,5 @@
 import java.util.*;
-public class Calculator_Function {
+public class _05_Calculator_Function {
 
     public static int Sum(int num1, int num2){
         return num1+num2;

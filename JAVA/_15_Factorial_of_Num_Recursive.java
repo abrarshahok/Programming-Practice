@@ -1,4 +1,4 @@
-public class Factorial {
+public class _15_Factorial_of_Num_Recursive {
     public static int factorial(int n) {
         // Step 1 : Base Condition
         if(n==0||n==1){

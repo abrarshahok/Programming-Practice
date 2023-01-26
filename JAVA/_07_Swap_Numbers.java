@@ -1,5 +1,5 @@
 import java.util.*;
-public class java_Methods {
+public class _07_Swap_Numbers {
 
     static void swap(int n1, int n2){
 

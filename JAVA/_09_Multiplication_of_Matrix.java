@@ -1,5 +1,5 @@
 import java.util.*;
-public class Arrays_Prob {
+public class _09_Multiplication_of_Matrix {
     public static void main(String[] args) {
         // Multi Dimensional Array
         Scanner input = new Scanner(System.in);

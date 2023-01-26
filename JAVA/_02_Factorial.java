@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Factorial{
+public class _02_Factorial{
     // Find factorial 
     public static int factorial(int num){
         int factorial=1;

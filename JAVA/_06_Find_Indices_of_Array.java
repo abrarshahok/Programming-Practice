@@ -1,5 +1,5 @@
 import java.util.*;
-public class java_2d_Arrays {
+public class _06_Find_Indices_of_Array {
     public static void main(String[] args) {
         
         Scanner in = new Scanner(System.in);

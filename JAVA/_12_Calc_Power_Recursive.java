@@ -1,4 +1,4 @@
-public class Calc_Power {
+public class _12_Calc_Power_Recursive {
     public static int calcPow(int x, int n) {
         if(x==0){
             return 0;
