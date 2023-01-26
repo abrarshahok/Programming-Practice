@@ -1,12 +1,21 @@
 #include "calculator.h"
 #include "ui_calculator.h"
+#include <QMessageBox>
 #include <sstream>
+#include <QValidator>
 #include <cstring>
+#include <cmath>
 Calculator::Calculator(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Calculator)
 {
     ui->setupUi(this);
+//    int min = -2147483647;
+//    int max =  2147483647;
+//    ui->Input->setValidator(new QIntValidator(min,max,ui->Input));
+    QRegularExpression expr("^([0-9]+[-+/*]?)+$");
+    QValidator *validator = new QRegularExpressionValidator(expr, this);
+    ui->Input->setValidator(validator);
 }
 
 Calculator::~Calculator()
@@ -95,6 +104,7 @@ void Calculator::on_Minus_clicked()
 
 void Calculator::on_Multiply_clicked()
 {
+
     ui->Input->setText(ui->Input->text() + QString::fromStdString("*"));
 }
 
@@ -141,5 +151,11 @@ void Calculator::on_Clear_clicked()
 void Calculator::on_Input_returnPressed()
 {
     Calculator::on_Equal_clicked();
+}
+
+
+void Calculator::on_About_clicked()
+{
+    QMessageBox::information(this,"About Developer","Made by : Abrar Ahmed Shahok");
 }
 

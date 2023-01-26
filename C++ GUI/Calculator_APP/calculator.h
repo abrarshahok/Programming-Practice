@@ -53,8 +53,9 @@ private slots:
 
     void on_Clear_clicked();
 
-
     void on_Input_returnPressed();
+
+    void on_About_clicked();
 
 private:
     Ui::Calculator *ui;
