@@ -1,6 +1,6 @@
 #ifndef CALCULATOR_H
 #define CALCULATOR_H
-
+#include <cstring>
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -51,11 +51,19 @@ private slots:
 
     void on_Ac_clicked();
 
-    void on_Clear_clicked();
+    bool on_Clear_clicked();
 
     void on_Input_returnPressed();
 
     void on_About_clicked();
+
+    void max_limit(std::string &s);
+
+    void check_num_limit(std::string s);
+
+    void check_op_limit(std::string s);
+
+    void on_Input_textChanged();
 
 private:
     Ui::Calculator *ui;

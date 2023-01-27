@@ -62,7 +62,7 @@ public:
         Calculator->setMinimumSize(QSize(250, 250));
         Calculator->setMaximumSize(QSize(16777215, 16777215));
         QIcon icon;
-        icon.addFile(QString::fromUtf8("../../../../Downloads/icon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8("../../../../Fiver/icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         Calculator->setWindowIcon(icon);
         centralwidget = new QWidget(Calculator);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -77,7 +77,7 @@ public:
         One->setSizePolicy(sizePolicy1);
         One->setMinimumSize(QSize(20, 20));
         QFont font;
-        font.setFamily(QString::fromUtf8("Fira Code SemiBold"));
+        font.setFamily(QString::fromUtf8("Fira Code Medium"));
         font.setPointSize(12);
         font.setBold(false);
         One->setFont(font);
@@ -225,6 +225,9 @@ public:
         Input->setSizePolicy(sizePolicy1);
         Input->setMinimumSize(QSize(20, 20));
         Input->setFont(font);
+        Input->setTabletTracking(false);
+        Input->setLayoutDirection(Qt::RightToLeft);
+        Input->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout->addWidget(Input, 0, 0, 1, 5);
 
@@ -249,9 +252,9 @@ public:
         About = new QPushButton(centralwidget);
         About->setObjectName(QString::fromUtf8("About"));
         QFont font1;
-        font1.setFamily(QString::fromUtf8("Fira Code SemiBold"));
+        font1.setFamily(QString::fromUtf8("Fira Code Medium"));
         font1.setPointSize(10);
-        font1.setBold(true);
+        font1.setBold(false);
         About->setFont(font1);
 
         gridLayout->addWidget(About, 6, 0, 1, 5);

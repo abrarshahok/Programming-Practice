@@ -36,7 +36,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>../../../../Downloads/icon.png</normaloff>../../../../Downloads/icon.png</iconset>
+    <normaloff>../../../../Fiver/icon.png</normaloff>../../../../Fiver/icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -56,7 +56,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -82,7 +82,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -108,7 +108,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -134,7 +134,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -160,7 +160,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -186,7 +186,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -212,7 +212,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -238,7 +238,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -264,7 +264,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -290,7 +290,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -316,7 +316,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -342,7 +342,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -368,7 +368,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -394,7 +394,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -420,7 +420,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -446,7 +446,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -472,16 +472,25 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
       </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
       <property name="toolTip">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
       </property>
      </widget>
     </item>
@@ -501,7 +510,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -527,7 +536,7 @@
       </property>
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>12</pointsize>
         <bold>false</bold>
        </font>
@@ -541,9 +550,9 @@
      <widget class="QPushButton" name="About">
       <property name="font">
        <font>
-        <family>Fira Code SemiBold</family>
+        <family>Fira Code Medium</family>
         <pointsize>10</pointsize>
-        <bold>true</bold>
+        <bold>false</bold>
        </font>
       </property>
       <property name="text">
