@@ -9,7 +9,7 @@
 Calculator::Calculator(QWidget *parent) : QMainWindow(parent), ui(new Ui::Calculator)
 {
     ui->setupUi(this);
-    QRegularExpression expr("^([0-9]{1,15}[+\\/*\\.-])+[0-9]{1,15}$");
+    QRegularExpression expr("^([0-9]{1,15}[+\\/*\\.-])+[-][0-9]{1,15}$");
     QValidator *validator = new QRegularExpressionValidator(expr, this);
     ui->Input->setValidator(validator);
     ui->Input->setFocusPolicy(Qt::StrongFocus);
@@ -21,103 +21,79 @@ Calculator::~Calculator()
     delete ui;
 }
 
-void Calculator::max_limit(std::string &s){
-    if(s.length() >= 15){
-        QMessageBox::warning(this,"Limitations!","Reached the Maximum Digits of Number (15)");
-    }
+void Calculator::print_num(std::string s){
+    std::string str = ui->Input->text().toStdString();
+    ui->Input->setText(ui->Input->text() + QString::fromStdString(s));
 }
 
-void Calculator::check_num_limit(std::string s){
+bool Calculator::check_op_limit(std::string s){
     std::string str = ui->Input->text().toStdString();
-    if(str.length() >= 15){
+    int len = str.length() - 1;
+    if(len < 0){
+        return false;
+    }
+    else if(str.at(len) != '.' && str.at(len) != '-' && str.at(len) != '+' && str.at(len) != '/' && str.at(len) != '*'){
         ui->Input->setText(ui->Input->text() + QString::fromStdString(s));
     }
-}
-
-void Calculator::check_op_limit(std::string s){
-    std::string str = ui->Input->text().toStdString();
-    int len = str.length()-1;
-    if(str.at(len) != '.' && str.at(len) != '-' && str.at(len) != '+' && str.at(len) != '/' && str.at(len) != '*'){
-        ui->Input->setText(ui->Input->text() + QString::fromStdString(s));
-    }
+    return true;
 }
 void Calculator::on_One_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("1");
+    Calculator::print_num("1");
 }
 
 
 void Calculator::on_Two_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("2");
+    Calculator::print_num("2");
 }
 
 
 void Calculator::on_Three_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("3");
+    Calculator::print_num("3");
 }
 
 
 void Calculator::on_Four_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("4");
+    Calculator::print_num("4");
 }
 
 
 void Calculator::on_Five_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("5");
+    Calculator::print_num("5");
 }
 
 
 void Calculator::on_Six_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("6");
+    Calculator::print_num("6");
 }
 
 
 void Calculator::on_Seven_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("7");
+    Calculator::print_num("7");
 }
 
 
 void Calculator::on_Eight_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("8");
+    Calculator::print_num("8");
 }
 
 
 void Calculator::on_Nine_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("9");
+    Calculator::print_num("9");
 }
 
 
 void Calculator::on_Zero_clicked()
 {
-    std::string str = ui->Input->text().toStdString();
-    Calculator::max_limit(str);
-    Calculator::check_num_limit("0");
+    Calculator::print_num("0");
 }
 
 
@@ -160,11 +136,21 @@ void Calculator::on_Equal_clicked()
     std::string str = ui->Input->text().toStdString();
     std::stringstream ss(str);
     while(ss>>temp){
-          if(op == '+'){output+=temp;}
-          else if(op == '-'){output-=temp;}
-          else if(op == '*'){output*=temp;}
-          else if(op == '/'){output/=temp;}
-          else{continue;}
+          if(op == '+'){
+            output+=temp;
+          }
+          else if(op == '-'){
+            output-=temp;
+          }
+          else if(op == '*'){
+            output*=temp;
+          }
+          else if(op == '/'){
+            output/=temp;
+          }
+          else{
+            continue;
+          }
           ss>>op;
       }
     ui->Input->setText(QString::fromStdString(std::to_string(output)));
@@ -187,7 +173,6 @@ bool Calculator::on_Clear_clicked()
     return false;
 }
 
-
 void Calculator::on_Input_returnPressed()
 {
     Calculator::on_Equal_clicked();
@@ -196,18 +181,12 @@ void Calculator::on_Input_returnPressed()
 
 void Calculator::on_About_clicked()
 {
-    QMessageBox::information(this,"About Developer","Made by : Abrar Ahmed Shahok\n"
-                                                    "Features : Addition,Subtraction,Multiplication & Division\n"
-                                                    "For Now It Does\'nt follow DMAS Rule I'll Soon Fix It!\n"
-                                                    "It Accepts only 15 Digits Input same as all Calculators\n"
-                                                    "Thanks for Using this Calculator <3");
+    QMessageBox aboutDev(QMessageBox::NoIcon,"About Developer","Made by Abrar Ahmed Shahok (21BSCS-20)\n"
+                                                               "Features : Addition,Subtraction,Multiplication & Division\n"
+                                                               "For Now It Does\'nt follow DMAS Rule, I'll Soon Fix It!\n"
+                                                               "It Accepts only 15 Digits Input same as all Calculators\n"
+                                                               "For More Info Vist : https://github.com/abrar-ahmed-21bscs20",QMessageBox::Ok);
+    QPixmap devPic(":/resources/devPic.jpg");
+    aboutDev.setIconPixmap(devPic.scaled(100,100,Qt::KeepAspectRatio));
+    aboutDev.exec();
 }
-
-
-void Calculator::on_Input_textChanged()
-{
-    if(ui->Input->text().length() >= 15){
-        QMessageBox::warning(this,"Limitations!","Reached the Maximum Digits of Number (15)");
-    }
-}
-

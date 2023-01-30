@@ -57,13 +57,9 @@ private slots:
 
     void on_About_clicked();
 
-    void max_limit(std::string &s);
+    void print_num(std::string s);
 
-    void check_num_limit(std::string s);
-
-    void check_op_limit(std::string s);
-
-    void on_Input_textChanged();
+    bool check_op_limit(std::string s);
 
 private:
     Ui::Calculator *ui;

@@ -10,13 +10,13 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    calculator.cpp \
+    tic_tac_toe.cpp
 
 HEADERS += \
-    calculator.h \
+    tic_tac_toe.h
 
 FORMS += \
-    calculator.ui
+    tic_tac_toe.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

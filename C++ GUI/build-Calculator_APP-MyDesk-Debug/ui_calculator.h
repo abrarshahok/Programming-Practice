@@ -42,10 +42,10 @@ public:
     QPushButton *Four;
     QPushButton *Nine;
     QPushButton *Plus;
-    QLineEdit *Input;
     QPushButton *Eight;
     QPushButton *Five;
     QPushButton *About;
+    QLineEdit *Input;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *Calculator)
@@ -53,7 +53,7 @@ public:
         if (Calculator->objectName().isEmpty())
             Calculator->setObjectName(QString::fromUtf8("Calculator"));
         Calculator->setEnabled(true);
-        Calculator->resize(250, 250);
+        Calculator->resize(250, 262);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(250);
         sizePolicy.setVerticalStretch(250);
@@ -62,7 +62,7 @@ public:
         Calculator->setMinimumSize(QSize(250, 250));
         Calculator->setMaximumSize(QSize(16777215, 16777215));
         QIcon icon;
-        icon.addFile(QString::fromUtf8("../../../../Fiver/icon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8(":/resources/icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         Calculator->setWindowIcon(icon);
         centralwidget = new QWidget(Calculator);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
@@ -219,18 +219,6 @@ public:
 
         gridLayout->addWidget(Plus, 5, 3, 1, 1);
 
-        Input = new QLineEdit(centralwidget);
-        Input->setObjectName(QString::fromUtf8("Input"));
-        sizePolicy1.setHeightForWidth(Input->sizePolicy().hasHeightForWidth());
-        Input->setSizePolicy(sizePolicy1);
-        Input->setMinimumSize(QSize(20, 20));
-        Input->setFont(font);
-        Input->setTabletTracking(false);
-        Input->setLayoutDirection(Qt::RightToLeft);
-        Input->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-
-        gridLayout->addWidget(Input, 0, 0, 1, 5);
-
         Eight = new QPushButton(centralwidget);
         Eight->setObjectName(QString::fromUtf8("Eight"));
         sizePolicy1.setHeightForWidth(Eight->sizePolicy().hasHeightForWidth());
@@ -258,6 +246,18 @@ public:
         About->setFont(font1);
 
         gridLayout->addWidget(About, 6, 0, 1, 5);
+
+        Input = new QLineEdit(centralwidget);
+        Input->setObjectName(QString::fromUtf8("Input"));
+        sizePolicy1.setHeightForWidth(Input->sizePolicy().hasHeightForWidth());
+        Input->setSizePolicy(sizePolicy1);
+        Input->setMinimumSize(QSize(20, 20));
+        Input->setFont(font);
+        Input->setTabletTracking(false);
+        Input->setLayoutDirection(Qt::RightToLeft);
+        Input->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout->addWidget(Input, 0, 0, 1, 5);
 
         Calculator->setCentralWidget(centralwidget);
         statusbar = new QStatusBar(Calculator);
@@ -305,13 +305,13 @@ public:
         Four->setText(QCoreApplication::translate("Calculator", "4", nullptr));
         Nine->setText(QCoreApplication::translate("Calculator", "9", nullptr));
         Plus->setText(QCoreApplication::translate("Calculator", "+", nullptr));
+        Eight->setText(QCoreApplication::translate("Calculator", "8", nullptr));
+        Five->setText(QCoreApplication::translate("Calculator", "5", nullptr));
+        About->setText(QCoreApplication::translate("Calculator", "About", nullptr));
 #if QT_CONFIG(tooltip)
         Input->setToolTip(QCoreApplication::translate("Calculator", "<html><head/><body><p align=\"right\"><br/></p></body></html>", nullptr));
 #endif // QT_CONFIG(tooltip)
         Input->setText(QString());
-        Eight->setText(QCoreApplication::translate("Calculator", "8", nullptr));
-        Five->setText(QCoreApplication::translate("Calculator", "5", nullptr));
-        About->setText(QCoreApplication::translate("Calculator", "About", nullptr));
     } // retranslateUi
 
 };

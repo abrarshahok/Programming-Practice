@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>250</width>
-    <height>250</height>
+    <height>262</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -35,8 +35,8 @@
    <string>Smart Calculator</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>../../../../Fiver/icon.png</normaloff>../../../../Fiver/icon.png</iconset>
+   <iconset resource="img.qrc">
+    <normaloff>:/resources/icon.png</normaloff>:/resources/icon.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -456,44 +456,6 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="0" colspan="5">
-     <widget class="QLineEdit" name="Input">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>20</width>
-        <height>20</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <family>Fira Code Medium</family>
-        <pointsize>12</pointsize>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="tabletTracking">
-       <bool>false</bool>
-      </property>
-      <property name="toolTip">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::RightToLeft</enum>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-     </widget>
-    </item>
     <item row="4" column="1">
      <widget class="QPushButton" name="Eight">
       <property name="sizePolicy">
@@ -560,6 +522,44 @@
       </property>
      </widget>
     </item>
+    <item row="0" column="0" colspan="5">
+     <widget class="QLineEdit" name="Input">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>20</width>
+        <height>20</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Fira Code Medium</family>
+        <pointsize>12</pointsize>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;right&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
@@ -584,6 +584,8 @@
   <tabstop>dot</tabstop>
   <tabstop>Plus</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
  <connections/>
 </ui>
