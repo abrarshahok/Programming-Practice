@@ -61,6 +61,19 @@ private slots:
 
     void on_push_Del_Admin_clicked();
 
+    void on_Push_Search_clicked();
+
+    void on_Run_Store_clicked();
+
+    void on_Add_to_Cart_clicked();
+
+    void Show_all_Tabs();
+
+    void on_Update_Stoke_clicked();
+
+
+    void on_See_Cart_Button_clicked();
+
 private:
     Ui::MainWindow *ui;
     QSqlDatabase db;

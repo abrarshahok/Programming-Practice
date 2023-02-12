@@ -12,6 +12,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->User_Login_Frame->hide();
     ui->Show_Admin_Info->hide();
     ui->Add_Admins_Page->hide();
+    ui->Add_Cart->hide();
     // Connecting Database
     db = QSqlDatabase::addDatabase("QMYSQL");
     db.setHostName("localhost");
@@ -29,7 +30,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_Admin_Login_clicked()
 {
     db.open();
-    QSqlDatabase::database().transaction();
+    db.transaction();
     QSqlQuery query(db);
     query.prepare("SELECT username, password FROM ADMINS WHERE username = :username AND password = :password");
     query.bindValue(":username", ui->Admin_user_Edit->text());
@@ -40,7 +41,8 @@ void MainWindow::on_Admin_Login_clicked()
         QMessageBox::information(this, "Success", "Login Successful");
         MainWindow::show_Admin_Portal();
     }
-    else if(ui->Admin_user_Edit->text() == "admin" && ui->Admin_Pass_Edit->text() == "admin"){
+    else if (ui->Admin_user_Edit->text() == "admin" && ui->Admin_Pass_Edit->text() == "admin")
+    {
         QMessageBox::information(this, "Success", "Login Successful");
         MainWindow::show_Admin_Portal();
     }
@@ -50,10 +52,9 @@ void MainWindow::on_Admin_Login_clicked()
         ui->Admin_Pass_Edit->setText("");
     }
 
-    QSqlDatabase::database().commit();
+    db.commit();
     db.close();
 }
-
 
 void MainWindow::on_See_Admins_clicked()
 {
@@ -63,9 +64,9 @@ void MainWindow::on_See_Admins_clicked()
     ui->add_tablets->hide();
     ui->See_Tablets->hide();
     ui->See_Users_Frame->hide();
-
-//    ui->Admins_Frame->hide();
+    ui->Add_Cart->hide();
     db.open();
+    db.transaction();
     QSqlQuery read_data(db);
     int rowNum = 0;
     read_data.prepare("SELECT * FROM ADMINS");
@@ -82,10 +83,9 @@ void MainWindow::on_See_Admins_clicked()
         }
     }
 
-    QSqlDatabase::database().commit();
+    db.commit();
     db.close();
 }
-
 
 void MainWindow::on_Submit_Admin_Info_clicked()
 {
@@ -97,7 +97,7 @@ void MainWindow::on_Submit_Admin_Info_clicked()
     else
     {
         db.open();
-        QSqlDatabase::database().transaction();
+        db.transaction();
         QSqlQuery insert_user(db);
         insert_user.prepare("INSERT INTO ADMINS(username,password)"
                             "VALUES (:username,:password)");
@@ -113,7 +113,7 @@ void MainWindow::on_Submit_Admin_Info_clicked()
             QMessageBox::warning(this, "Error", "Admin Data Not Inserted");
         }
 
-        QSqlDatabase::database().commit();
+        db.commit();
         db.close();
         ui->Add_User_Edit->setText("");
         ui->Add_Pass_Edit->setText("");
@@ -123,7 +123,7 @@ void MainWindow::on_Submit_Admin_Info_clicked()
 void MainWindow::on_push_Del_Admin_clicked()
 {
     db.open();
-    QSqlDatabase::database().transaction();
+    db.transaction();
     QSqlQuery delete_user(db);
     delete_user.prepare("DELETE FROM ADMINS WHERE ID=" + ui->del_Admin_Edit->text() + "");
 
@@ -136,7 +136,7 @@ void MainWindow::on_push_Del_Admin_clicked()
         QMessageBox::warning(this, "Error", "Admin Data Not Deleted");
     }
 
-    QSqlDatabase::database().commit();
+    db.commit();
     db.close();
     ui->del_Admin_Edit->setText("");
     MainWindow::on_See_Admins_clicked();
@@ -145,7 +145,7 @@ void MainWindow::on_push_Del_Admin_clicked()
 void MainWindow::on_Normal_User_Login_clicked()
 {
     db.open();
-    QSqlDatabase::database().transaction();
+    db.transaction();
     QSqlQuery query(db);
     query.prepare("SELECT username, password FROM USERS WHERE username = :username AND password = :password");
     query.bindValue(":username", ui->Normal_User_Name->text());
@@ -161,9 +161,8 @@ void MainWindow::on_Normal_User_Login_clicked()
         ui->Normal_user_Pass->setText("");
     }
 
-    QSqlDatabase::database().commit();
+    db.commit();
     db.close();
-
 }
 
 void MainWindow::on_See_Users_clicked()
@@ -174,7 +173,9 @@ void MainWindow::on_See_Users_clicked()
     ui->Show_Admin_Info->hide();
     ui->add_tablets->hide();
     ui->Add_Admins_Page->hide();
+    ui->Add_Cart->hide();
     db.open();
+    db.transaction();
     QSqlQuery read_data(db);
     int rowNum = 0;
     read_data.prepare("SELECT * FROM USERS");
@@ -191,7 +192,7 @@ void MainWindow::on_See_Users_clicked()
         }
     }
 
-    QSqlDatabase::database().commit();
+    db.commit();
     db.close();
 }
 
@@ -204,7 +205,7 @@ void MainWindow::on_Submit_User_Info_clicked()
     else
     {
         db.open();
-        QSqlDatabase::database().transaction();
+        db.transaction();
         QSqlQuery insert_user(db);
         insert_user.prepare("INSERT INTO USERS(username,password)"
                             "VALUES (:username,:password)");
@@ -220,7 +221,7 @@ void MainWindow::on_Submit_User_Info_clicked()
             QMessageBox::warning(this, "Error", "User Data Not Inserted");
         }
 
-        QSqlDatabase::database().commit();
+        db.commit();
         db.close();
         ui->Add_User_Edit->setText("");
         ui->Add_Pass_Edit->setText("");
@@ -231,7 +232,7 @@ void MainWindow::on_Submit_User_Info_clicked()
 void MainWindow::on_pushDel_User_clicked()
 {
     db.open();
-    QSqlDatabase::database().transaction();
+    db.transaction();
     QSqlQuery delete_user(db);
     delete_user.prepare("DELETE FROM USERS WHERE ID=" + ui->del_User_Edit->text() + "");
 
@@ -244,7 +245,7 @@ void MainWindow::on_pushDel_User_clicked()
         QMessageBox::warning(this, "Error", "User Data Not Deleted");
     }
 
-    QSqlDatabase::database().commit();
+    db.commit();
     db.close();
     ui->del_User_Edit->setText("");
     MainWindow::on_See_Users_clicked();
@@ -252,15 +253,14 @@ void MainWindow::on_pushDel_User_clicked()
 
 void MainWindow::on_Add_Tab_Info_clicked()
 {
-    if (ui->S_No->text() == "" && ui->tab_Name->text() == "" && ui->tab_Price->text() == "" && ui->tab_stoke->text() == ""
-     && ui->tab_Desc->text() == "" && ui->tab_MFG->text() == "" && ui->tab_EXP->text() == "")
+    if (ui->S_No->text() == "" && ui->tab_Name->text() == "" && ui->tab_Price->text() == "" && ui->tab_stoke->text() == "" && ui->tab_Desc->text() == "" && ui->tab_MFG->text() == "" && ui->tab_EXP->text() == "")
     {
         QMessageBox::warning(this, "Error", "Please, Fill Input Fields!");
     }
     else
     {
         db.open();
-        QSqlDatabase::database().transaction();
+        db.transaction();
         QSqlQuery insert_data(db);
         insert_data.prepare("INSERT INTO TABS(S_no,Name,Price,Stoke,Description,MFG,EXP)"
                             "VALUES (:S_no,:Name,:Price,:Stoke,:Description,:MFG,:EXP)");
@@ -282,7 +282,7 @@ void MainWindow::on_Add_Tab_Info_clicked()
             QMessageBox::warning(this, "Error", "Data Not Inserted");
         }
 
-        QSqlDatabase::database().commit();
+        db.commit();
         db.close();
         MainWindow::reset_input_Fields();
     }
@@ -291,32 +291,33 @@ void MainWindow::on_Add_Tab_Info_clicked()
 void MainWindow::on_See_Tabs_clicked()
 {
     ui->See_Tablets->show();
+    ui->Add_Cart->hide();
     ui->Add_Users_Page->hide();
     ui->add_tablets->hide();
     ui->See_Users_Frame->hide();
     ui->Show_Admin_Info->hide();
     ui->Add_Admins_Page->hide();
     db.open();
-    QSqlQuery read_data(db);
+    db.transaction();
+    QSqlQuery show_the_tab(db);
     int rowNum = 0;
-    read_data.prepare("SELECT * FROM TABS");
-
-    if (read_data.exec())
+    show_the_tab.prepare("SELECT * FROM TABS");
+    if (show_the_tab.exec())
     {
-        ui->show_Tab->setRowCount(read_data.size());
-        while (read_data.next())
+        ui->show_Tab->setRowCount(show_the_tab.size());
+        while (show_the_tab.next())
         {
-            ui->show_Tab->setItem(rowNum, 0, new QTableWidgetItem(QString(read_data.value("S_No").toString())));
-            ui->show_Tab->setItem(rowNum, 1, new QTableWidgetItem(QString(read_data.value("Name").toString())));
-            ui->show_Tab->setItem(rowNum, 2, new QTableWidgetItem(QString(read_data.value("Price").toString())));
-            ui->show_Tab->setItem(rowNum, 3, new QTableWidgetItem(QString(read_data.value("Stoke").toString())));
-            ui->show_Tab->setItem(rowNum, 4, new QTableWidgetItem(QString(read_data.value("Description").toString())));
-            ui->show_Tab->setItem(rowNum, 5, new QTableWidgetItem(QString(read_data.value("MFG").toString())));
-            ui->show_Tab->setItem(rowNum, 6, new QTableWidgetItem(QString(read_data.value("MFG").toString())));
+            ui->show_Tab->setItem(rowNum, 0, new QTableWidgetItem(QString(show_the_tab.value("S_No").toString())));
+            ui->show_Tab->setItem(rowNum, 1, new QTableWidgetItem(QString(show_the_tab.value("Name").toString())));
+            ui->show_Tab->setItem(rowNum, 2, new QTableWidgetItem(QString(show_the_tab.value("Price").toString())));
+            ui->show_Tab->setItem(rowNum, 3, new QTableWidgetItem(QString(show_the_tab.value("Stoke").toString())));
+            ui->show_Tab->setItem(rowNum, 4, new QTableWidgetItem(QString(show_the_tab.value("Description").toString())));
+            ui->show_Tab->setItem(rowNum, 5, new QTableWidgetItem(QString(show_the_tab.value("MFG").toString())));
+            ui->show_Tab->setItem(rowNum, 6, new QTableWidgetItem(QString(show_the_tab.value("EXP").toString())));
             rowNum++;
         }
     }
-
+    db.commit();
     db.close();
 }
 void MainWindow::on_Push_Del_Tab_clicked()
@@ -341,7 +342,6 @@ void MainWindow::on_Push_Del_Tab_clicked()
     MainWindow::on_See_Tabs_clicked();
 }
 
-
 void MainWindow::on_Admin_clicked()
 {
     ui->User->hide();
@@ -364,6 +364,7 @@ void MainWindow::on_Add_Tablets_clicked()
     ui->See_Users_Frame->hide();
     ui->Show_Admin_Info->hide();
     ui->Add_Admins_Page->hide();
+    ui->Add_Cart->hide();
 }
 
 void MainWindow::on_Add_Users_Button_clicked()
@@ -374,6 +375,7 @@ void MainWindow::on_Add_Users_Button_clicked()
     ui->Show_Admin_Info->hide();
     ui->See_Users_Frame->hide();
     ui->Add_Admins_Page->hide();
+    ui->Add_Cart->hide();
 }
 
 void MainWindow::reset_input_Fields()
@@ -395,6 +397,7 @@ void MainWindow::on_Add_Admins_clicked()
     ui->add_tablets->hide();
     ui->See_Tablets->hide();
     ui->See_Users_Frame->hide();
+    ui->Add_Cart->hide();
 }
 
 void MainWindow::on_back_to_login_clicked()
@@ -408,11 +411,13 @@ void MainWindow::on_back_to_login_clicked()
     ui->add_tablets->hide();
     ui->Add_Users_Page->hide();
     ui->User_Login_Frame->hide();
+    ui->Add_Cart->hide();
 }
 
-
-void MainWindow::show_Admin_Portal(){
+void MainWindow::show_Admin_Portal()
+{
     ui->Admin_Portal->show();
+    ui->Run_Store->show();
     ui->User_Login_Frame->hide();
     ui->See_Tablets->show();
     ui->See_Tabs->show();
@@ -423,14 +428,18 @@ void MainWindow::show_Admin_Portal(){
     ui->Add_Admins->show();
     ui->See_Admins->show();
     ui->Add_Tablets->show();
+    ui->Add_Cart->hide();
     ui->Admin_user_Edit->setText("");
     ui->Admin_Pass_Edit->setText("");
 }
 
-void MainWindow::show_User_Portal(){
+void MainWindow::show_User_Portal()
+{
     ui->Admin_Portal->show();
     ui->See_Tablets->show();
     ui->See_Tabs->show();
+    ui->Run_Store->show();
+    ui->Add_Cart->hide();
     ui->User_Login_Frame->hide();
     ui->See_Users->hide();
     ui->Show_Admin_Info->hide();
@@ -451,4 +460,127 @@ void MainWindow::on_About_Developer_clicked()
     QPixmap devPic(":/img/devPic.jpg");
     aboutDev.setIconPixmap(devPic.scaled(100, 100, Qt::KeepAspectRatio));
     aboutDev.exec();
+}
+
+void MainWindow::on_Push_Search_clicked()
+{
+    db.open();
+    db.transaction();
+    QSqlQuery search_tab(db);
+    int rowNum = 0;
+    search_tab.prepare("SELECT * FROM TABS WHERE Name = :Name");
+    search_tab.bindValue(":Name", ui->Search_Tabs->text());
+    if (search_tab.exec())
+    {
+        ui->show_Tab_in_Cart->setRowCount(search_tab.size());
+        while (search_tab.next())
+        {
+            ui->show_Tab_in_Cart->setItem(rowNum, 0, new QTableWidgetItem(QString(search_tab.value("S_No").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 1, new QTableWidgetItem(QString(search_tab.value("Name").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 2, new QTableWidgetItem(QString(search_tab.value("Price").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 3, new QTableWidgetItem(QString(search_tab.value("Stoke").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 4, new QTableWidgetItem(QString(search_tab.value("Description").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 5, new QTableWidgetItem(QString(search_tab.value("MFG").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 6, new QTableWidgetItem(QString(search_tab.value("EXP").toString())));
+            rowNum++;
+        }
+    }
+    db.commit();
+    db.close();
+}
+
+void MainWindow::Show_all_Tabs()
+{
+    db.open();
+    db.transaction();
+    QSqlQuery show_the_tab(db);
+    int rowNum = 0;
+    show_the_tab.prepare("SELECT * FROM TABS");
+    if (show_the_tab.exec())
+    {
+        ui->show_Tab_in_Cart->setRowCount(show_the_tab.size());
+        while (show_the_tab.next())
+        {
+            ui->show_Tab_in_Cart->setItem(rowNum, 0, new QTableWidgetItem(QString(show_the_tab.value("S_No").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 1, new QTableWidgetItem(QString(show_the_tab.value("Name").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 2, new QTableWidgetItem(QString(show_the_tab.value("Price").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 3, new QTableWidgetItem(QString(show_the_tab.value("Stoke").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 4, new QTableWidgetItem(QString(show_the_tab.value("Description").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 5, new QTableWidgetItem(QString(show_the_tab.value("MFG").toString())));
+            ui->show_Tab_in_Cart->setItem(rowNum, 6, new QTableWidgetItem(QString(show_the_tab.value("EXP").toString())));
+            rowNum++;
+        }
+    }
+    db.commit();
+    db.close();
+}
+
+void MainWindow::on_Add_to_Cart_clicked()
+{
+}
+void MainWindow::on_Run_Store_clicked()
+{
+    MainWindow::Show_all_Tabs();
+    ui->Add_Admins_Page->hide();
+    ui->Add_Users_Page->hide();
+    ui->Show_Admin_Info->hide();
+    ui->add_tablets->hide();
+    ui->See_Tablets->hide();
+    ui->See_Users_Frame->hide();
+    ui->Add_Cart->show();
+}
+
+void MainWindow::on_Update_Stoke_clicked()
+{
+    db.open();
+    db.transaction();
+    QSqlQuery update_Stoke(db);
+    update_Stoke.prepare("UPDATE TABS SET Stoke = Stoke + :tab_stoke WHERE Name = :Name");
+    update_Stoke.bindValue(":tab_stoke", ui->input_Stoke->text().toDouble());
+    update_Stoke.bindValue(":Name", ui->stoke_tab_Name->text());
+    if (update_Stoke.exec())
+    {
+        db.commit();
+        ui->stoke_tab_Name->setText("");
+        ui->input_Stoke->setText("");
+        QMessageBox::information(this, "Success", "Stoke Added");
+        MainWindow::on_See_Tabs_clicked();
+    }
+    else
+    {
+        db.rollback();
+    }
+    db.close();
+}
+
+void MainWindow::on_See_Cart_Button_clicked()
+{
+    ui->See_Cart->show();
+    ui->See_Tablets->hide();
+    ui->Add_Cart->hide();
+    ui->Add_Users_Page->hide();
+    ui->add_tablets->hide();
+    ui->See_Users_Frame->hide();
+    ui->Show_Admin_Info->hide();
+    ui->Add_Admins_Page->hide();
+    db.open();
+    db.transaction();
+    QSqlQuery cartQuery(db);
+    cartQuery.prepare("SELECT * FROM BILL");
+    if (cartQuery.exec())
+    {
+        int rowNum = 0;
+        ui->cart_Table->setRowCount(cartQuery.size());
+        while (cartQuery.next())
+        {
+            ui->cart_Table->setItem(rowNum, 0, new QTableWidgetItem(cartQuery.value("Name").toString()));
+            ui->cart_Table->setItem(rowNum, 1, new QTableWidgetItem(cartQuery.value("Quantity").toString()));
+            ui->cart_Table->setItem(rowNum, 2, new QTableWidgetItem(cartQuery.value("Price").toString()));
+            ui->cart_Table->setItem(rowNum, 3, new QTableWidgetItem(cartQuery.value("Total Bill").toString()));
+            ui->cart_Table->setItem(rowNum, 4, new QTableWidgetItem(cartQuery.value("Data/Time").toString()));
+            rowNum++;
+        }
+    }
+    db.commit();
+    db.close();
 }

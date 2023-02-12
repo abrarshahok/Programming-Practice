@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>763</width>
-    <height>550</height>
+    <width>1320</width>
+    <height>741</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -24,8 +24,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>763</width>
-    <height>550</height>
+    <width>10000</width>
+    <height>10000</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -171,7 +171,7 @@
      <rect>
       <x>10</x>
       <y>80</y>
-      <width>741</width>
+      <width>1271</width>
       <height>431</height>
      </rect>
     </property>
@@ -329,7 +329,7 @@
        <x>11</x>
        <y>40</y>
        <width>100</width>
-       <height>176</height>
+       <height>236</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -347,6 +347,20 @@
         </property>
         <property name="text">
          <string>See Tablets</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="Run_Store">
+        <property name="text">
+         <string>Run Store</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="See_Cart_Button">
+        <property name="text">
+         <string>See Cart</string>
         </property>
        </widget>
       </item>
@@ -454,10 +468,10 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>130</x>
+       <x>120</x>
        <y>10</y>
-       <width>571</width>
-       <height>361</height>
+       <width>581</width>
+       <height>371</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -468,60 +482,110 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_18">
       <item>
-       <widget class="QTableWidget" name="show_Tab">
-        <column>
-         <property name="text">
-          <string>S No</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Name</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Price</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Stoke</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Description</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>MFG</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>EXP</string>
-         </property>
-        </column>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="del_Tab">
-        <property name="text">
-         <string>Enter S_No to Delete Tab Info</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="Choose_Del_Tab"/>
-      </item>
-      <item>
-       <widget class="QPushButton" name="Push_Del_Tab">
-        <property name="text">
-         <string>Delete Tab</string>
-        </property>
-       </widget>
+       <layout class="QVBoxLayout" name="verticalLayout_9">
+        <item>
+         <widget class="QTableWidget" name="show_Tab">
+          <column>
+           <property name="text">
+            <string>S No</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Stoke</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>MFG</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>EXP</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="del_Tab">
+          <property name="text">
+           <string>Enter S_No to Delete Tab Info</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="Choose_Del_Tab"/>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Push_Del_Tab">
+          <property name="text">
+           <string>Delete Tab</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_15">
+          <property name="text">
+           <string>Update/Add Stoke</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_8">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>Name</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="stoke_tab_Name"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>Stoke</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="input_Stoke"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="Update_Stoke">
+          <property name="text">
+           <string>Add Stoke</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </item>
      </layout>
     </widget>
@@ -586,7 +650,7 @@
     <widget class="QFrame" name="User_Page">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>120</x>
        <y>-30</y>
        <width>731</width>
        <height>411</height>
@@ -678,6 +742,53 @@
      <property name="text">
       <string>logout</string>
      </property>
+    </widget>
+    <widget class="QFrame" name="See_Cart">
+     <property name="geometry">
+      <rect>
+       <x>810</x>
+       <y>60</y>
+       <width>421</width>
+       <height>291</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_31">
+      <item>
+       <widget class="QTableWidget" name="cart_Table">
+        <column>
+         <property name="text">
+          <string>Name</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Quantity</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Price</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Total Bill</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Data/Time</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
     </widget>
    </widget>
    <widget class="QPushButton" name="About_Developer">
@@ -826,6 +937,122 @@
      </item>
     </layout>
    </widget>
+   <widget class="QFrame" name="Add_Cart">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>90</y>
+      <width>571</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_30">
+     <item>
+      <widget class="QLineEdit" name="Search_Tabs">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Push_Search">
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTableWidget" name="show_Tab_in_Cart">
+       <column>
+        <property name="text">
+         <string>S No</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Name</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Price</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Stoke</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Description</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>MFG</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>EXP</string>
+        </property>
+       </column>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>Tab Name</string>
+           </property>
+           <property name="buddy">
+            <cstring>cart_tab_name</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="cart_tab_name"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>Quantity</string>
+           </property>
+           <property name="buddy">
+            <cstring>cart_tab_quantity</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="cart_tab_quantity"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Add_to_Cart">
+       <property name="text">
+        <string>Add to Cart</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
@@ -833,7 +1060,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>763</width>
+     <width>1320</width>
      <height>21</height>
     </rect>
    </property>
