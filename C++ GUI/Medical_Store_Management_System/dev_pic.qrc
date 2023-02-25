@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/img">
-        <file>devPic.jpg</file>
-        <file>pharmacy.png</file>
-    </qresource>
-</RCC>

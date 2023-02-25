@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QFileDialog>
 #include <QDir>
+
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
@@ -20,11 +21,11 @@ void MainWindow::on_Write_clicked()
 {
     QFile file("/home/abrar/21-BSCS/Programming_Practice/C++ GUI/QFile_Practice/newfile.txt");
     if(!file.open(QFile::WriteOnly | QFile::Text)){
-        QMessageBox::warning(this,"Error","File Not Opened!");
+        QMessageBox::warning(this,"Error","File Not Opened");
     }
     QTextStream write(&file);
-    QString write_text = ui->plainTextEdit->toPlainText();
-    write << write_text;
+    QString text = ui->plainTextEdit->toPlainText();
+    write << text;
     file.flush();
     file.close();
 }

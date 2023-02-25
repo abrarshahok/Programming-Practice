@@ -1,0 +1,2103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1205</width>
+    <height>675</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>70</width>
+    <height>40</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MEDICAL STORE</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="img.qrc">
+    <normaloff>:/img/icon.jpg</normaloff>:/img/icon.jpg</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QStackedWidget" name="Medical_Store">
+      <property name="minimumSize">
+       <size>
+        <width>70</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="currentIndex">
+       <number>3</number>
+      </property>
+      <widget class="QWidget" name="Login_Page">
+       <layout class="QVBoxLayout" name="verticalLayout_50">
+        <item>
+         <widget class="QFrame" name="frame_4">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_51">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_21">
+             <item>
+              <spacer name="horizontalSpacer_9">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="title">
+               <property name="minimumSize">
+                <size>
+                 <width>401</width>
+                 <height>81</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 36pt &quot;Fira Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>MEDICAL STORE MANAGEMENT</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_10">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_20">
+             <item>
+              <spacer name="horizontalSpacer_7">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_49">
+               <item>
+                <spacer name="verticalSpacer_13">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="admin_button">
+                 <property name="minimumSize">
+                  <size>
+                   <width>200</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>   ADMIN LOGIN</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/admin.png</normaloff>:/img/admin.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>40</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="user_button">
+                 <property name="minimumSize">
+                  <size>
+                   <width>200</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>  WORKER LOGIN</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/worker.png</normaloff>:/img/worker.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_8">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_12">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_22">
+             <item>
+              <spacer name="horizontalSpacer_12">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="about_dev">
+               <property name="minimumSize">
+                <size>
+                 <width>50</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>   About</string>
+               </property>
+               <property name="icon">
+                <iconset resource="img.qrc">
+                 <normaloff>:/img/about.png</normaloff>:/img/about.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Admin_Login_Page">
+       <layout class="QVBoxLayout" name="verticalLayout_43">
+        <item>
+         <widget class="QFrame" name="frame_3">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_42">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_41">
+             <item>
+              <widget class="QLabel" name="admin_login_title">
+               <property name="styleSheet">
+                <string notr="true">font: 36pt &quot;Fira Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>ADMIN LOGIN</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_30">
+               <item>
+                <spacer name="horizontalSpacer_6">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_7">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_40">
+                  <item>
+                   <layout class="QVBoxLayout" name="verticalLayout_39">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_19">
+                      <item>
+                       <widget class="QLabel" name="label_2">
+                        <property name="styleSheet">
+                         <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                        </property>
+                        <property name="text">
+                         <string>Username</string>
+                        </property>
+                        <property name="buddy">
+                         <cstring>admin_name_input</cstring>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="admin_name_input"/>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_28">
+                      <item>
+                       <widget class="QLabel" name="label_3">
+                        <property name="styleSheet">
+                         <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                        </property>
+                        <property name="text">
+                         <string>Password </string>
+                        </property>
+                        <property name="buddy">
+                         <cstring>admin_passw_input</cstring>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLineEdit" name="admin_passw_input">
+                        <property name="echoMode">
+                         <enum>QLineEdit::Password</enum>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="admin_login_button">
+                    <property name="styleSheet">
+                     <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                    </property>
+                    <property name="text">
+                     <string>   Login</string>
+                    </property>
+                    <property name="icon">
+                     <iconset resource="img.qrc">
+                      <normaloff>:/img/login.png</normaloff>:/img/login.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>25</width>
+                      <height>25</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_29"/>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_16">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_23">
+               <item>
+                <spacer name="horizontalSpacer_11">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="back">
+                 <property name="styleSheet">
+                  <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string> back</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/go-back.png</normaloff>:/img/go-back.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="User_login_Page">
+       <layout class="QVBoxLayout" name="verticalLayout_57">
+        <item>
+         <widget class="QFrame" name="frame_8">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_52">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_56">
+             <item>
+              <widget class="QLabel" name="User_login_title">
+               <property name="styleSheet">
+                <string notr="true">font: 36pt &quot;Fira Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>USER LOGIN</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_5">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_33">
+               <item>
+                <spacer name="horizontalSpacer_5">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QFrame" name="frame_9">
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_55">
+                  <item>
+                   <layout class="QHBoxLayout" name="horizontalLayout_32">
+                    <item>
+                     <layout class="QHBoxLayout" name="horizontalLayout_31">
+                      <item>
+                       <layout class="QVBoxLayout" name="verticalLayout_54">
+                        <item>
+                         <layout class="QVBoxLayout" name="verticalLayout_53">
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_24">
+                            <item>
+                             <widget class="QLabel" name="label_7">
+                              <property name="styleSheet">
+                               <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Username</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="user_input"/>
+                            </item>
+                           </layout>
+                          </item>
+                          <item>
+                           <layout class="QHBoxLayout" name="horizontalLayout_25">
+                            <item>
+                             <widget class="QLabel" name="label_6">
+                              <property name="styleSheet">
+                               <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                              </property>
+                              <property name="text">
+                               <string>Password </string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QLineEdit" name="user_pass_input">
+                              <property name="echoMode">
+                               <enum>QLineEdit::Password</enum>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </item>
+                         </layout>
+                        </item>
+                        <item>
+                         <widget class="QPushButton" name="user_login_button">
+                          <property name="styleSheet">
+                           <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                          </property>
+                          <property name="text">
+                           <string>   Login</string>
+                          </property>
+                          <property name="icon">
+                           <iconset resource="img.qrc">
+                            <normaloff>:/img/login.png</normaloff>:/img/login.png</iconset>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>25</width>
+                            <height>25</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </item>
+                     </layout>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_13">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_4">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_26">
+               <item>
+                <spacer name="horizontalSpacer_15">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="back_2">
+                 <property name="styleSheet">
+                  <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string> back</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/go-back.png</normaloff>:/img/go-back.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Store_Portal">
+       <layout class="QVBoxLayout" name="verticalLayout_38">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_18">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_37">
+            <item>
+             <widget class="QLabel" name="Store_Label">
+              <property name="styleSheet">
+               <string notr="true">font: 22pt &quot;Fira Sans&quot;;</string>
+              </property>
+              <property name="text">
+               <string>  ADMIN PORTAL</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="frame">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_35">
+               <item>
+                <widget class="QPushButton" name="see_tab_button">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string> See Tablets</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/see_tab.png</normaloff>:/img/see_tab.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="add_delete_tab">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string> Add Tablets</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/add_tab.png</normaloff>:/img/add_tab.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="See_Users_Button">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>   See Users</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/see_users.svg</normaloff>:/img/see_users.svg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="add_del_users">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>   Add Users</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/add_users.png</normaloff>:/img/add_users.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QPushButton" name="logout">
+                 <property name="styleSheet">
+                  <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                 </property>
+                 <property name="text">
+                  <string>   Logout</string>
+                 </property>
+                 <property name="icon">
+                  <iconset resource="img.qrc">
+                   <normaloff>:/img/logout.png</normaloff>:/img/logout.png</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>30</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_2">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_36">
+             <item>
+              <widget class="QStackedWidget" name="store_portal_pages">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="see_tab">
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_2">
+                   <item>
+                    <widget class="QLabel" name="label_4">
+                     <property name="styleSheet">
+                      <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                     </property>
+                     <property name="text">
+                      <string>All Tablet Details</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QTableWidget" name="see_tabs_table">
+                     <property name="styleSheet">
+                      <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                     </property>
+                     <column>
+                      <property name="text">
+                       <string>SNo</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Name</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Price</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Stoke</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>MFG</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>EXP</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Tablets Description (Uses)</string>
+                      </property>
+                     </column>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="label_5">
+                     <property name="styleSheet">
+                      <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                     </property>
+                     <property name="text">
+                      <string>Search Tablet Details</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_3">
+                     <item>
+                      <widget class="QLabel" name="label_13">
+                       <property name="styleSheet">
+                        <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>Name    </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="search_tab_input"/>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_7">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_7">
+                       <item>
+                        <widget class="QLabel" name="label_19">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>                              DELETE TABLET</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_2">
+                         <item>
+                          <widget class="QLabel" name="label_20">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>SNo</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="del_tab_input"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="del_tab_button">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>  Delete</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="img.qrc">
+                           <normaloff>:/img/delete.png</normaloff>:/img/delete.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>20</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_15">
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_14">
+                         <item>
+                          <widget class="QLabel" name="label_21">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>                                  ADD STOKE</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_5">
+                           <item>
+                            <layout class="QVBoxLayout" name="verticalLayout_12">
+                             <item>
+                              <widget class="QLabel" name="label_31">
+                               <property name="styleSheet">
+                                <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                               </property>
+                               <property name="text">
+                                <string>Tablet</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_32">
+                               <property name="styleSheet">
+                                <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                               </property>
+                               <property name="text">
+                                <string>New Stoke</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <layout class="QVBoxLayout" name="verticalLayout_13">
+                             <item>
+                              <widget class="QComboBox" name="update_stoke_name_input"/>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="update_stoke_quantity"/>
+                             </item>
+                            </layout>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="update_stoke_button">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>  Update Stoke</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="img.qrc">
+                           <normaloff>:/img/update.png</normaloff>:/img/update.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>20</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_16">
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_17">
+                         <item>
+                          <widget class="QLabel" name="label_33">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>                      ADD NEW  PRICE</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <layout class="QHBoxLayout" name="horizontalLayout_6">
+                           <item>
+                            <layout class="QVBoxLayout" name="verticalLayout_18">
+                             <item>
+                              <widget class="QLabel" name="label_34">
+                               <property name="styleSheet">
+                                <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                               </property>
+                               <property name="text">
+                                <string>Tablet</string>
+                               </property>
+                              </widget>
+                             </item>
+                             <item>
+                              <widget class="QLabel" name="label_35">
+                               <property name="styleSheet">
+                                <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                               </property>
+                               <property name="text">
+                                <string>New Price</string>
+                               </property>
+                              </widget>
+                             </item>
+                            </layout>
+                           </item>
+                           <item>
+                            <layout class="QVBoxLayout" name="verticalLayout_19">
+                             <item>
+                              <widget class="QComboBox" name="update_price_name_input"/>
+                             </item>
+                             <item>
+                              <widget class="QLineEdit" name="new_price_input"/>
+                             </item>
+                            </layout>
+                           </item>
+                          </layout>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="update_price_button">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>  Update Price</string>
+                         </property>
+                         <property name="icon">
+                          <iconset resource="img.qrc">
+                           <normaloff>:/img/update_price.png</normaloff>:/img/update_price.png</iconset>
+                         </property>
+                         <property name="iconSize">
+                          <size>
+                           <width>20</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="add_del_tabs">
+                <layout class="QVBoxLayout" name="verticalLayout_48">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_47">
+                   <item>
+                    <widget class="QLabel" name="label_36">
+                     <property name="styleSheet">
+                      <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                     </property>
+                     <property name="text">
+                      <string>INPUT TABLET INFO</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_46">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_3">
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout">
+                         <item>
+                          <widget class="QLabel" name="label">
+                           <property name="styleSheet">
+                            <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>NAME            </string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="tab_Name_Input"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_11">
+                         <item>
+                          <widget class="QLabel" name="label_8">
+                           <property name="styleSheet">
+                            <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>PRICE            </string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="tab_Price_Input"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_12">
+                         <item>
+                          <widget class="QLabel" name="label_9">
+                           <property name="styleSheet">
+                            <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>STOKE           </string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="tab_Stoke_input"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_13">
+                         <item>
+                          <widget class="QLabel" name="label_10">
+                           <property name="styleSheet">
+                            <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>MFG               </string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="tab_MFG_Input"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_14">
+                         <item>
+                          <widget class="QLabel" name="label_11">
+                           <property name="styleSheet">
+                            <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>EXP                </string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="tab_EXP_Input"/>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_15">
+                         <item>
+                          <widget class="QLabel" name="label_12">
+                           <property name="styleSheet">
+                            <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>DESCRIPTION</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="tab_Description_Input"/>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="add_Tab_Button">
+                       <property name="styleSheet">
+                        <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>  ADD INFO</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="img.qrc">
+                         <normaloff>:/img/add_tab.png</normaloff>:/img/add_tab.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>20</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_11">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="show_User_Info">
+                <layout class="QVBoxLayout" name="verticalLayout_30">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_29">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_27">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_5">
+                       <item>
+                        <widget class="QLabel" name="label_14">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>Admin Info</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QTableWidget" name="Admin_Table">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <column>
+                          <property name="text">
+                           <string>ID</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Username</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Password</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Role</string>
+                          </property>
+                         </column>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_9">
+                       <item>
+                        <widget class="QLabel" name="label_25">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>                                                                                                 Delete Admin</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_9">
+                         <item>
+                          <widget class="QLabel" name="label_26">
+                           <property name="styleSheet">
+                            <string notr="true">font: 11pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>NAME /ID</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="del_admin_name_input"/>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="admin_del_button">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string> Delete</string>
+                           </property>
+                           <property name="icon">
+                            <iconset resource="img.qrc">
+                             <normaloff>:/img/delete.png</normaloff>:/img/delete.png</iconset>
+                           </property>
+                           <property name="iconSize">
+                            <size>
+                             <width>20</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_28">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_8">
+                       <item>
+                        <widget class="QLabel" name="label_15">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>Worker Info</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QTableWidget" name="User_Table">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <column>
+                          <property name="text">
+                           <string>ID</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Username</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Password</string>
+                          </property>
+                         </column>
+                         <column>
+                          <property name="text">
+                           <string>Role</string>
+                          </property>
+                         </column>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_10">
+                       <item>
+                        <widget class="QLabel" name="label_27">
+                         <property name="styleSheet">
+                          <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>                                                                                                 Delete User</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_10">
+                         <item>
+                          <widget class="QLabel" name="label_28">
+                           <property name="styleSheet">
+                            <string notr="true">font: 11pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>NAME / ID</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="del_user_name_input"/>
+                         </item>
+                         <item>
+                          <widget class="QPushButton" name="del_user_button">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string> Delete</string>
+                           </property>
+                           <property name="icon">
+                            <iconset resource="img.qrc">
+                             <normaloff>:/img/delete.png</normaloff>:/img/delete.png</iconset>
+                           </property>
+                           <property name="iconSize">
+                            <size>
+                             <width>20</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="add_del_Users">
+                <layout class="QVBoxLayout" name="verticalLayout_45">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_44">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_23">
+                     <item>
+                      <widget class="QLabel" name="label_23">
+                       <property name="styleSheet">
+                        <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>Add Admins</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_4">
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_11">
+                         <item>
+                          <widget class="QLabel" name="label_16">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>Username</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_17">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>Password</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_20">
+                         <item>
+                          <widget class="QLineEdit" name="add_admin_name"/>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="add_admin_pass"/>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="add_admin_info_button">
+                       <property name="styleSheet">
+                        <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>  Add Admin</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="img.qrc">
+                         <normaloff>:/img/admin.png</normaloff>:/img/admin.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="verticalSpacer_10">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>20</width>
+                         <height>40</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_24">
+                     <item>
+                      <widget class="QLabel" name="label_24">
+                       <property name="styleSheet">
+                        <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>Add Worker</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_8">
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_21">
+                         <item>
+                          <widget class="QLabel" name="label_18">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>Username</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_22">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>Password</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_22">
+                         <item>
+                          <widget class="QLineEdit" name="add_normal_user_name"/>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="add_normal_user_pass"/>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="add_normal_user_info_button">
+                       <property name="styleSheet">
+                        <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>  Add Worker</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="img.qrc">
+                         <normaloff>:/img/worker.png</normaloff>:/img/worker.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_9">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="Run_Store_Page">
+       <layout class="QVBoxLayout" name="verticalLayout_64">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_27">
+          <item>
+           <widget class="QFrame" name="frame_5">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_61">
+             <item>
+              <widget class="QLabel" name="label_29">
+               <property name="styleSheet">
+                <string notr="true">font: 22pt &quot;Fira Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>RUN STORE</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="add_cart_page_button">
+               <property name="minimumSize">
+                <size>
+                 <width>70</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>Add to Cart</string>
+               </property>
+               <property name="icon">
+                <iconset resource="img.qrc">
+                 <normaloff>:/img/cart.png</normaloff>:/img/cart.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="See_Cart_Page_Button">
+               <property name="minimumSize">
+                <size>
+                 <width>70</width>
+                 <height>40</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>     See Cart</string>
+               </property>
+               <property name="icon">
+                <iconset resource="img.qrc">
+                 <normaloff>:/img/cart.png</normaloff>:/img/cart.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="verticalSpacer_16">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="close_store">
+               <property name="minimumSize">
+                <size>
+                 <width>70</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+               </property>
+               <property name="text">
+                <string>    Logout</string>
+               </property>
+               <property name="icon">
+                <iconset resource="img.qrc">
+                 <normaloff>:/img/logout.png</normaloff>:/img/logout.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_6">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_63">
+             <item>
+              <widget class="QStackedWidget" name="run_store_features">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="Add_to_Cart">
+                <layout class="QVBoxLayout" name="verticalLayout_33">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_32">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_6">
+                     <item>
+                      <widget class="QLabel" name="label_30">
+                       <property name="styleSheet">
+                        <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>All Tablet Details</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QTableWidget" name="see_tabs_table_run">
+                       <property name="styleSheet">
+                        <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="sizeAdjustPolicy">
+                        <enum>QAbstractScrollArea::AdjustIgnored</enum>
+                       </property>
+                       <column>
+                        <property name="text">
+                         <string>SNo</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Name</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Price</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Stoke</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>MFG</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>EXP</string>
+                        </property>
+                       </column>
+                       <column>
+                        <property name="text">
+                         <string>Tablets Description (Uses)</string>
+                        </property>
+                       </column>
+                      </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_4">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_34">
+                       <item>
+                        <widget class="QLabel" name="label_42">
+                         <property name="styleSheet">
+                          <string notr="true">font: 14t &quot;Fira Sans&quot;;
+font: 14pt &quot;Fira Sans&quot;;</string>
+                         </property>
+                         <property name="text">
+                          <string>Search Tablets</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <layout class="QHBoxLayout" name="horizontalLayout_17">
+                         <item>
+                          <widget class="QLabel" name="label_41">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>Name      </string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="cart_tab_search"/>
+                         </item>
+                         <item>
+                          <spacer name="horizontalSpacer_2">
+                           <property name="orientation">
+                            <enum>Qt::Horizontal</enum>
+                           </property>
+                           <property name="sizeHint" stdset="0">
+                            <size>
+                             <width>40</width>
+                             <height>20</height>
+                            </size>
+                           </property>
+                          </spacer>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_3">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_31">
+                     <item>
+                      <widget class="QLabel" name="label_37">
+                       <property name="styleSheet">
+                        <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>Add to Cart</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_16">
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_25">
+                         <item>
+                          <widget class="QLabel" name="label_38">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>Tablet</string>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QLabel" name="label_39">
+                           <property name="styleSheet">
+                            <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                           </property>
+                           <property name="text">
+                            <string>Quantity</string>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </item>
+                       <item>
+                        <layout class="QVBoxLayout" name="verticalLayout_26">
+                         <item>
+                          <widget class="QComboBox" name="cart_tab_name"/>
+                         </item>
+                         <item>
+                          <widget class="QLineEdit" name="cart_tab_quantity"/>
+                         </item>
+                        </layout>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <widget class="QPushButton" name="add_to_cart_button">
+                       <property name="styleSheet">
+                        <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                       </property>
+                       <property name="text">
+                        <string>    Add to Cart</string>
+                       </property>
+                       <property name="icon">
+                        <iconset resource="img.qrc">
+                         <normaloff>:/img/add_to_Cart.png</normaloff>:/img/add_to_Cart.png</iconset>
+                       </property>
+                       <property name="iconSize">
+                        <size>
+                         <width>30</width>
+                         <height>25</height>
+                        </size>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="See_Cart">
+                <layout class="QVBoxLayout" name="verticalLayout_62">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_60">
+                   <item>
+                    <widget class="QLabel" name="label_40">
+                     <property name="styleSheet">
+                      <string notr="true">font: 14pt &quot;Fira Sans&quot;;</string>
+                     </property>
+                     <property name="text">
+                      <string>See Cart</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QTableWidget" name="see_cart_Table">
+                     <property name="styleSheet">
+                      <string notr="true">font: 12pt &quot;Fira Sans&quot;;</string>
+                     </property>
+                     <column>
+                      <property name="text">
+                       <string>Name</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Quantity</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Price</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>Total Bill</string>
+                      </property>
+                     </column>
+                     <column>
+                      <property name="text">
+                       <string>DateTime</string>
+                      </property>
+                     </column>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1205</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="img.qrc"/>
+ </resources>
+ <connections/>
+</ui>

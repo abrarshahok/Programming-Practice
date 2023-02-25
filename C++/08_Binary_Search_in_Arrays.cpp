@@ -4,13 +4,11 @@ using namespace std;
 int binarySearch(int arr[],int n,int key)
 {
     int s=0,e=n,mid;
-    
-    cout<<"Element is at Index : ";
-
     while(s<=e)
 
     {
         mid=(s+e)/2;
+        
         if(arr[mid]==key)
         {
             return mid;
@@ -29,19 +27,17 @@ int binarySearch(int arr[],int n,int key)
 }
 int main()
 {
-    int n,key,arr[n];
+    int n,key;
 
     cout<<"Enter Number of Elelment : ";
     cin>>n;
-    
-    cout<<"\nEnter Elements of Array"<<endl;
+    int arr[n];
+    cout<<"Enter Elements of Array  : ";
     for(int i=0;i<n;i++)
     {
         cin>>arr[i];
     }
-
-    cout<<"\nEnter Key to Find its Index"<<endl;
+    cout<<"Enter Key to Find its Index : ";
     cin>>key;
-    
-    cout<<binarySearch(arr,n,key);
+    cout<<"Index : "<<binarySearch(arr,n,key);
 }
