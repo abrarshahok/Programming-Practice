@@ -13,7 +13,5 @@ void main(void)
 	
 	a=h*w;
 	printf("\nArea of Rectangle is %d",a);
-	
-	getch();
-	
+
 }
